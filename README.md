@@ -8,17 +8,25 @@
 
 [![Github Issues](http://githubbadges.herokuapp.com/oduacm/meetups-nearby/issues.svg?style=flat-square)](https://github.com/oduacm/meetups-nearby/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/oduacm/meetups-nearby/pulls.svg?style=flat-square)](https://github.com/oduacm/meetups-nearby/pulls) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-<iframe src="https://ghbtns.com/github-btn.html?user=oduacm&repo=meetups-nearby&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+[![forthebadge](http://forthebadge.com/images/badges/built-with-swag.svg)](http://forthebadge.com)
 
 ---
 
 ## Contributing
 
-To get started there are 2 simple steps:
+To contribute to this project, there are **3 simple steps**:
 
-1) <iframe src="https://ghbtns.com/github-btn.html?user=oduacm&repo=meetups-nearby&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+- **Step 1**
 
-then 2) create a pull request!
+🍴 **Fork** this repo!
+
+- **Step 2**
+
+🔨 Make some **awesome changes** (add new features, optimize code, etc.)!
+
+- **Step 3**
+
+🔃 Create a **pull request**!
 
 ---
 
@@ -26,13 +34,16 @@ then 2) create a pull request!
 
 ### Developers
 
-<iframe src="https://ghbtns.com/github-btn.html?user=joshuajharris&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=aag1091&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
+| ![](https://avatars2.githubusercontent.com/u/2312094?v=3&s=460) | ![](https://avatars2.githubusercontent.com/u/10967744?v=3&s=460)
+| :---: |:---:| :---:|
+| <a href="http://github.com/aag1091" target="_blank">`aag1091`</a> |  <a href="http://github.com/joshuajharris" target="_blank">`joshuajharris`</a>
 
 ### Designer
 
-<iframe src="https://ghbtns.com/github-btn.html?user=fvcproductions&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="30px"></iframe>
+| [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) |
+| :---: |
+| <a href="http://github.com/fvcproductions" target="_blank">`fvcproductions`</a> |
+
 
 ---
 
