@@ -1,8 +1,10 @@
-<a href="http://oduacm.github.io/meetups-nearby"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="Tech Meetups Nearby" alt="Tech Meetups Nearby"></a>
+<a href="http://oduacm.github.io/meetups-nearby" target="_blank"><img src="img/screenshot.png" title="Tech Meetups Nearby" alt="Tech Meetups Nearby"></a>
 
 # Tech Meetups Nearby
 
 > We showcase **tech-related** meetups from the `757` area using a custom API & <a href="http://meetup.com" target="_blank">Meetup.com</a>
+
+## Head on over to <a href="http://oduacm.github.io/meetups-nearby" target="_blank">`oduacm.github.io/meetups-nearby`</a> to check it out! :smile:
 
 [![Github Issues](http://githubbadges.herokuapp.com/oduacm/meetups-nearby/issues.svg?style=flat-square)](https://github.com/oduacm/meetups-nearby/issues) [![Pending Pull-Requests](http://githubbadges.herokuapp.com/oduacm/meetups-nearby/pulls.svg?style=flat-square)](https://github.com/oduacm/meetups-nearby/pulls) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
