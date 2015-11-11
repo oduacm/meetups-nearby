@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="meetupsNearby">
+
+<head>
+  <title>Meetups Nearby</title>
+  <meta name="viewport" content="initial-scale=1" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+</head>
+
+<body ng-controller="MainController">
+  <div ng-cloak>
+    <md-toolbar class="md-theme-light">
+      <h2 class="md-toolbar-tools">
+        <span>Meetups Nearby</span>
+      </h2>
+    </md-toolbar>
+    <md-content>
+      <md-list>
+        <md-list-item class="md-10-line" ng-repeat="meetup in meetups">
+          <div class="md-list-item-text">
+            <h3><a href="{{meetup.event_url}}" target="_blank">{{meetup.name}}</a></h3>
+            <h4>{{meetup.time | momentify}}</h4>
+            <!--<p ng-bind-html="meetup.description | unsafe"></p>-->
+          </div>
+          <md-button class="md-secondary">Respond</md-button>
+          <md-divider ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
+    </md-content>
+  </div>
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+
+  <!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+  <script src="js/moment.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
