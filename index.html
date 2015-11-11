@@ -2,42 +2,108 @@
 <html lang="en" ng-app="meetupsNearby">
 
 <head>
-  <title>Meetups Nearby</title>
-  <meta name="viewport" content="initial-scale=1" />
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Powered by ACM@ODU">
+    <title>757 Tech Meetups</title>
+    <!-- *** CSS *** -->
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <!-- Angular Material -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+    <!-- main CSS file -->
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <!-- *** Icons *** -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- *** Fonts *** -->
+    <!-- Inconsolata Font -->
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <!-- *** Favicons *** -->
+    <!-- For old IEs -->
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" />
+    <!-- For new browsers multisize ico  -->
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="img/favicons/favicon.ico">
+    <!-- Chrome for Android -->
+    <link rel="icon" sizes="192x192" href="img/favicons/favicon-192.png">
+    <!-- For iPhone 6+ downscaled for other devices -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/favicons/favicon-180.png">
+    <!-- For IE10 Metro -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicons/favicon-144.png">
 </head>
 
-<body ng-controller="MainController">
-  <div ng-cloak>
-    <md-toolbar class="md-theme-light">
-      <h2 class="md-toolbar-tools">
-        <span>Meetups Nearby</span>
-      </h2>
-    </md-toolbar>
-    <md-content>
-      <md-list>
-        <md-list-item class="md-10-line" ng-repeat="meetup in meetups">
-          <div class="md-list-item-text">
-            <h3><a href="{{meetup.event_url}}" target="_blank">{{meetup.name}}</a></h3>
-            <h4>{{meetup.time | momentify}}</h4>
-            <!--<p ng-bind-html="meetup.description | unsafe"></p>-->
-          </div>
-          <md-button class="md-secondary">Respond</md-button>
-          <md-divider ng-if="!$last"></md-divider>
-        </md-list-item>
-      </md-list>
-    </md-content>
-  </div>
-  <!-- Angular Material Dependencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
-
-  <!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
-  <script src="js/moment.js"></script>
-
-  <script src="js/app.js"></script>
+<body>
+    <div ng-controller="MainController" ng-cloak="">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <span flex=""></span>
+                <a href="http://meetup.com" target="_blank"><img src="img/favicons/favicon-72.png" class="img-responsive"></a>
+                <span flex=""></span>
+                <h2><span>Tech Meetups in the <code>757</code> area</span></h2>
+                <span flex=""></span>
+                <a href="http://www.cs.odu.edu/~acm/" target="_blank">
+                    <md-button class="md-raised" aria-label="Learn More">Made with <i class="fa fa-heart"></i> by ACM@ODU</md-button>
+                </a>
+                <a href="https://github.com/oduacm/meetups-nearby" target="_blank">
+                    <md-button class="md-fab md-mini" aria-label="Favorite">
+                        <i class="fa fa-github-alt"></i>
+                    </md-button>
+                </a>
+                <span flex=""></span>
+            </div>
+        </md-toolbar>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="card-columns">
+                    <div class="card" ng-repeat="meetup in meetups">
+                        <img class="card-img-top img-responsive" src="http://lorempixel.com/500/500" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">{{meetup.name}}</h4>
+                            <p class="card-text">{{meetup.group.name}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p><code>who?</code> {{meetup.group.name}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p><code>where?</code> {{meetup.venue.address_1}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p><code>when?</code> {{meetup.time | momentify}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p><code>why?</code> to bond with fellow {{meetup.group.who}}</p>
+                            </li>
+                        </ul>
+                        <div class="card-block">
+                            <a ng-href="http://meetup.com/{{meetup.group.urlname}}" target="_blank" class="btn btn-primary-outline">
+                                Learn More
+                            </a>
+                            <a ng-href="{{meetup.event_url}}" target="_blank" class="btn btn-danger-outline">
+                                RSVP
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.js"></script>
+    <!-- Moment JS -->
+    <script src="js/moment.js"></script>
+    <!-- Our main JS -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
